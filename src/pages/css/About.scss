@@ -1,0 +1,141 @@
+.about-mobile-container {
+  display: none;
+}
+.message-list {
+  overflow: hidden;
+  .message {
+    text-align: center;
+    display: flex;
+    margin: 2rem auto;
+    i {
+      margin: 0 1.5rem;
+    }
+
+    > div {
+      max-width: 80%;
+    }
+    &.-left {
+      position: relative;
+      transition: 0.5s;
+      animation: popLeft 0.5s ease-in-out;
+      i {
+        display: none;
+      }
+      &:hover {
+        animation: iappear 1s ease-in-out;
+        transition: all 5s ease-in-out;
+        i {
+          display: block;
+        }
+      }
+    }
+    &.-right {
+      position: relative;
+      flex-direction: row-reverse;
+      transition: 0.5s;
+      animation: popRight 0.5s ease-in-out;
+      i {
+        display: none;
+      }
+      &:hover {
+        animation: iappear 1s ease-in-out;
+        transition: all 5s ease-in-out;
+        i {
+          display: block;
+        }
+      }
+    }
+  }
+  .nes-bcrikko {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+.mobile {
+  .message {
+    display: none;
+    &.-right:hover,
+    &.-left:hover {
+      -webkit-animation-name: none;
+      i {
+        display: none;
+      }
+    }
+  }
+  .about-mobile-container {
+    display: block;
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes iappear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// @keyframes hoverRight {
+//   0% {
+//     transform: origin(0px);
+//   }
+
+//   100% {
+//     transform: translateX(40%);
+//     transition: 0.5s;
+//   }
+// }
+// @keyframes hoverLeft {
+//   0% {
+//     transform: origin(0px);
+//   }
+
+//   100% {
+//     transform: translateX(40%);
+//     transition: 0.5s;
+//   }
+// }
+// @keyframes popRight {
+//   0% {
+//     transform: translateX(0px);
+//   }
+
+//   100% {
+//     transform: translateX(-15px);
+//   }
+// }
+
+// @keyframes popLeft {
+//   0% {
+//     transform: translateX(0px);
+//   }
+
+//   100% {
+//     transform: translateX(15px);
+//   }
+// }
+// @keyframes popRight {
+//   0% {
+//     transform: translateX(0px);
+//   }
+
+//   100% {
+//     transform: translateX(-15px);
+//   }
+// }

@@ -1,0 +1,121 @@
+main {
+  animation: apparition 1s ease-in-out;
+  .home-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    .home-left-side {
+      img {
+        display: none;
+      }
+      width: 50%;
+      display: flex;
+      margin-left: 2rem;
+      flex-direction: column;
+      line-height: 3rem;
+      justify-content: space-between;
+      .name-size {
+        font-size: 1.3rem;
+        color: rgb(172, 164, 164);
+      }
+      .btn-home-container {
+        margin-bottom: 0rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .home-right-side {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      img {
+        width: 20vw;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        box-shadow: 0 0 10px #fefefeb3;
+      }
+    }
+  }
+  &.mobile {
+    .home-section {
+      .home-right-side {
+        display: none;
+      }
+      .home-left-side {
+        width: 100%;
+        margin: 0;
+        gap: 5rem;
+        .mobile-top-container {
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 2rem;
+            display: block;
+            width: 20vw;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            box-shadow: 0 0 10px #fefefeb3;
+          }
+          .typed-text-home {
+            br {
+              display: none;
+            }
+            .name-size {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .btn-home-container {
+          gap: 1rem;
+          width: 100%;
+          height: 10vh;
+          button {
+            p {
+              margin-top: 0.5rem;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+    //   flex-direction: column;
+    //   align-items: center;
+    //   .home-right-side {
+    //     img {
+    //       display: none;
+    //     }
+    //   }
+    //   .home-left-side {
+    //     margin: 0;
+    //     img {
+    //       margin-right: 1rem;
+    //       display: block;
+    //       border-radius: 50%;
+
+    //       width: 75px;
+    //       height: 75px;
+    //       align-self: flex-start;
+    //     }
+    //     .btn-home-container {
+    //       display: flex;
+    //       align-self: flex-end;
+    //     }
+    //   }
+    // }
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
