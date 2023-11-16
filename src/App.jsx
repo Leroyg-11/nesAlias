@@ -19,15 +19,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/nesAlias/*" element={<Layout />}>
+        <Route path="/nesAlias/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="projet" element={<Projet />} />
           <Route path="contact" element={<Contact />} />
         </Route>
-        <Route path="/nesAlias/error" element={<Error />} />
-
-        <Route path="*" element={(match) => <Redirect to="/error-custom" />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
