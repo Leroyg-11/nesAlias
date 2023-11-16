@@ -69,32 +69,6 @@ const Home = () => {
           <img src={Avatar} alt="" />
         </div>
       </section>
-      <div>
-        <FlippingCard>
-          <FlippingCardBack>
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundImage: "url(https://i.imgur.com/wjbYGNv.jpg)",
-              }}
-            ></div>
-          </FlippingCardBack>
-          <FlippingCardFront>
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundImage: "url(https://i.imgur.com/3sKjY8V.jpg)",
-              }}
-            ></div>
-          </FlippingCardFront>
-        </FlippingCard>
-      </div>
     </main>
   );
 };
