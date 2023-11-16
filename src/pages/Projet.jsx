@@ -37,7 +37,7 @@ const Projet = () => {
       }`}
     >
       <h1 className="title">Mes réalisations</h1>
-      <div>
+      <div className="carousel-flipp">
         <CarouselFlipp />
       </div>
 

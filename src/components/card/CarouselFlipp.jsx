@@ -28,7 +28,6 @@ const CarouselFlipp = (repo) => {
 
   return (
     <div>
-      Carousel flipp
       <div className="flip">
         {reposWithOneStar.length > 0 && (
           <div

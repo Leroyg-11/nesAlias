@@ -3,9 +3,16 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
+  .carousel-flipp {
+    display: none;
+  }
+
   &.mobile {
     .projet-container {
       display: none;
+    }
+    .carousel-flipp {
+      display: block;
     }
   }
 }

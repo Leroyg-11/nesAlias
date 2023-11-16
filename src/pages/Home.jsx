@@ -7,6 +7,7 @@ import {
   FlippingCardBack,
   FlippingCardFront,
 } from "react-ui-cards";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -55,13 +56,16 @@ const Home = () => {
             />
           </div>
           <div className="btn-home-container">
-            <button className="nes-btn ">
-              <p>En savoir plus</p>
-            </button>
-            <button className="nes-btn ">
-              {" "}
-              <p>Me contacter</p>{" "}
-            </button>
+            <Link className="home-btn" to="/nesAlias/about">
+              <button type="button" className="nes-btn ">
+                En savoir plus
+              </button>
+            </Link>
+            <Link className="home-btn" to="/nesAlias/contact">
+              <button type="button" className="nes-btn ">
+                Me contacter{" "}
+              </button>
+            </Link>
           </div>
         </div>
 
