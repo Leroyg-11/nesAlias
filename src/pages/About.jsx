@@ -61,6 +61,7 @@ const About = () => {
           </div>
         </section>
       </section>
+      <div className="about-mobile-container"></div>
     </main>
   );
 };

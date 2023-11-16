@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import Avatar from "../assets/fotor.jpg";
-import Typed from "react-typed";
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -29,7 +28,7 @@ const Home = () => {
           <div className="mobile-top-container">
             <img src={Avatar} alt="" width="400px" />
 
-            <Typed
+            {/* <Typed
               className="typed-text-home"
               strings={[
                 `Bonjour, je suis <br><span class="name-size">Guillaume Leroy</span><br
@@ -37,7 +36,7 @@ const Home = () => {
               Développeur Web Junior.`,
               ]}
               typeSpeed={40}
-            />
+            /> */}
           </div>
           <div className="btn-home-container">
             <button className="nes-btn ">

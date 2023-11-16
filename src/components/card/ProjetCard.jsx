@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Card.scss";
 import CradPopUp from "./CradPopUp";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import Flippy, { FrontSide, BackSide } from "react-flippy";
-
-import { Carousel } from "react-responsive-carousel";
 
 const ProjetCard = (repos) => {
   const ref = useRef();
@@ -34,22 +30,7 @@ const ProjetCard = (repos) => {
         </div>
         <div className="top-back-container">
           <p className="title">{repos.name}</p>
-          <div className="carousel-slide">
-            <Carousel>
-              <div>
-                <img src={slideOne} alt="" />
-                <p className="legend">Legend 1</p>
-              </div>
-              <div>
-                <img src={slideTwo} />
-                <p className="legend">Legend 2</p>
-              </div>
-              <div>
-                <img src={slideThree} />
-                <p className="legend">Legend 3</p>
-              </div>
-            </Carousel>
-          </div>
+          <div className="carousel-slide"></div>
         </div>
       </div>
 
