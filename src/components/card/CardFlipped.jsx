@@ -30,7 +30,6 @@ const CardFlipped = (repos) => {
               height: "100%",
               backgroundSize: "contain",
               backgroundPosition: "center",
-              border: "1px solid red",
             }}
           >
             <div className="front-content">

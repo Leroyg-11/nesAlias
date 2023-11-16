@@ -5,6 +5,7 @@ article {
   margin: 0rem auto 6rem !important;
 }
 .front-content {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   border: 5px solid #a1a1a1a5;
@@ -23,6 +24,7 @@ article {
   }
 }
 .back-content {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   border: 5px solid #69606073;
@@ -44,7 +46,6 @@ article {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.1);
   }
