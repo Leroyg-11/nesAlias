@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ProjetCard from "../components/card/ProjetCard";
 import axios from "axios";
 import "./css/Projet.scss";
 
-import CarouselCard from "../components/card/CarouselCard";
 import CardFlipped from "../components/card/CardFlipped";
 import CarouselFlipp from "../components/card/CarouselFlipp";
 
@@ -83,127 +81,6 @@ const Projet = (repo) => {
           );
         })}
       </section>
-      {/* <section className="projet-container">
-        {reposWithOneStar.map((repo) => {
-          const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
-          const slideOne = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-1.jpeg`;
-          const slideTwo = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-2.jpeg`;
-          const slideThree = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-3.jpeg`;
-
-          return (
-            <ProjetCard
-              key={repo.id}
-              name={repo.name}
-              description={repo.description}
-              html_url={repo.html_url}
-              topics={repo.topics}
-              language={repo.language}
-              logoUrl={logoUrl}
-              slideOne={slideOne}
-              slideTwoe={slideTwo}
-              slideThree={slideThree}
-            />
-          );
-        })}
-      </section> */}
-
-      <section className="carousel-section">
-        <CarouselCard />
-      </section>
-
-      {/* <section className="carousel-section">
-        <Carousel
-          containerProps={{
-            className: "container-carousel",
-
-            style: {
-              width: "100%",
-            },
-          }}
-          preventScrollOnSwipe
-          swipeTreshold={60}
-          activeSlideIndex={activeSlide}
-          activeSlideProps={{
-            className: "is-active",
-
-            style: {
-              background: "",
-            },
-          }}
-          onRequestChange={setActiveSlide}
-          forwardBtnProps={{
-            children: ">",
-            className: "nes-btn is-primary btn-slide right",
-            style: {
-              width: 60,
-              height: 60,
-              minWidth: 60,
-              alignSelf: "center",
-            },
-          }}
-          backwardBtnProps={{
-            children: "<",
-            className: "nes-btn is-primary btn-slide left",
-
-            style: {
-              width: 60,
-
-              height: 60,
-              minWidth: 60,
-              alignSelf: "center",
-            },
-          }}
-          dotsNav={{
-            show: true,
-            itemBtnProps: {
-              className: "dot",
-              style: {
-                height: 16,
-                width: 16,
-                borderRadius: "50%",
-                border: 0,
-              },
-            },
-            activeItemBtnProps: {
-              style: {
-                height: 16,
-                width: 16,
-                borderRadius: "50%",
-                border: 0,
-                background: "black",
-              },
-            },
-          }}
-          itemsToShow={2}
-          speed={400}
-          centerMode
-          // Configurations du carousel comme dans votre composant CarouselTest
-        >
-          {reposWithOneStar.map((repo) => {
-            const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
-            const slideOne = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-1.jpeg`;
-            const slideTwo = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-2.jpeg`;
-            const slideThree = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-3.jpeg`;
-
-            return (
-              <div className="not-active">
-                <ProjetCard
-                  key={repo.id}
-                  name={repo.name}
-                  description={repo.description}
-                  html_url={repo.html_url}
-                  topics={repo.topics}
-                  language={repo.language}
-                  logoUrl={logoUrl}
-                  slideOne={slideOne}
-                  slideTwo={slideTwo}
-                  slideThree={slideThree}
-                />
-              </div>
-            );
-          })}
-        </Carousel>
-      </section> */}
     </main>
   );
 };
