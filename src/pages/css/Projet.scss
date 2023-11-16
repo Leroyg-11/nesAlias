@@ -1,4 +1,7 @@
-.projet-card-container {
+.projet-container {
   display: flex;
   flex-wrap: wrap;
+  .mobile {
+    background-color: red;
+  }
 }

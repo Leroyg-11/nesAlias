@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./css/Projet.scss";
-
 import CardFlipped from "../components/card/CardFlipped";
 import CarouselFlipp from "../components/card/CarouselFlipp";
 
-// import CarouselTest from "../components/card/Carousel";
-// import CarouselProjet from "../components/card/CarouselProjet";
-
-const Projet = (repo) => {
-  const [isActive, setIsActive] = useState(false);
-  const [activeSlide, setActiveSlide] = useState(0);
-
+const Projet = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [repos, setRepos] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,29 +16,18 @@ const Projet = (repo) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const [repos, setRepos] = useState([]);
-  const [selectedTopic, setSelectedTopic] = useState(null); // Ajoutez un état pour le sujet sélectionné
 
-  const getRepos = () => {
+  useEffect(() => {
     axios
       .get("https://api.github.com/users/Leroyg-11/repos")
       .then((res) => {
-        // console.log(res.data);
         setRepos(res.data);
       })
       .catch((error) => console.error(error));
-  };
-
-  useEffect(() => {
-    getRepos(); // Call the 'getRepos' function when the component mounts
   }, []);
 
   const reposWithOneStar = repos.filter((repo) => repo.stargazers_count === 1);
-
-  const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
-  const slideOne = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-1.jpeg`;
-  const slideTwo = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-2.jpeg`;
-  const slideThree = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-3.jpeg`;
+  console.log(reposWithOneStar);
 
   return (
     <main
@@ -55,9 +37,6 @@ const Projet = (repo) => {
     >
       <h1 className="title">Mes réalisations</h1>
 
-      <section className="carousel-flip">
-        <CarouselFlipp />
-      </section>
       <section className="projet-container">
         {reposWithOneStar.map((repo) => {
           const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
@@ -75,11 +54,15 @@ const Projet = (repo) => {
               language={repo.language}
               logoUrl={logoUrl}
               slideOne={slideOne}
-              slideTwoe={slideTwo}
+              slideTwo={slideTwo}
               slideThree={slideThree}
             />
           );
         })}
+      </section>
+
+      <section>
+        <CarouselFlipp />
       </section>
     </main>
   );
