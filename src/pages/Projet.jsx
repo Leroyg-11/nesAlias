@@ -4,6 +4,8 @@ import axios from "axios";
 import "./css/Projet.scss";
 
 import CarouselCard from "../components/card/CarouselCard";
+import CardFlipped from "../components/card/CardFlipped";
+import CarouselFlipp from "../components/card/CarouselFlipp";
 
 // import CarouselTest from "../components/card/Carousel";
 // import CarouselProjet from "../components/card/CarouselProjet";
@@ -55,7 +57,33 @@ const Projet = (repo) => {
     >
       <h1 className="title">Mes réalisations</h1>
 
+      <section className="carousel-flip">
+        <CarouselFlipp />
+      </section>
       <section className="projet-container">
+        {reposWithOneStar.map((repo) => {
+          const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
+          const slideOne = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-1.jpeg`;
+          const slideTwo = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-2.jpeg`;
+          const slideThree = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-3.jpeg`;
+
+          return (
+            <CardFlipped
+              key={repo.id}
+              name={repo.name}
+              description={repo.description}
+              html_url={repo.html_url}
+              topics={repo.topics}
+              language={repo.language}
+              logoUrl={logoUrl}
+              slideOne={slideOne}
+              slideTwoe={slideTwo}
+              slideThree={slideThree}
+            />
+          );
+        })}
+      </section>
+      {/* <section className="projet-container">
         {reposWithOneStar.map((repo) => {
           const logoUrl = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Logo.png`;
           const slideOne = `https://raw.githubusercontent.com/Leroyg-11/${repo.name}/main/Slide/slide-1.jpeg`;
@@ -77,7 +105,7 @@ const Projet = (repo) => {
             />
           );
         })}
-      </section>
+      </section> */}
 
       <section className="carousel-section">
         <CarouselCard />

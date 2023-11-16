@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-simply-carousel";
 import ProjetCard from "./ProjetCard";
 import axios from "axios";
+import CardFlipped from "./CardFlipped";
 
 const CarouselCard = (repo) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -100,7 +101,7 @@ const CarouselCard = (repo) => {
 
             return (
               <div className="not-active" key={repo.id}>
-                <ProjetCard
+                <CardFlipped
                   name={repo.name}
                   description={repo.description}
                   html_url={repo.html_url}

@@ -1,0 +1,22 @@
+.react-multi-carousel-item {
+  transform-style: preserve-3d;
+  display: flex !important;
+  backface-visibility: hidden;
+  justify-content: center !important;
+  z-index: -1 !important;
+  transform: scale(0.8);
+  opacity: 0.2;
+  pointer-events: none !important;
+}
+
+.react-multi-carousel-item--active {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex !important;
+  justify-content: center !important;
+  z-index: 1 !important;
+  transform: scale(1);
+  opacity: 1.2;
+  pointer-events: auto !important;
+  visibility: visible;
+}
