@@ -15,43 +15,6 @@ html {
   margin: 0;
   height: max-content;
 }
-// .preloader {
-//   p {
-//     display: none;
-//     animation: bodyLoader 5s ease-in-out forwards;
-//   }
-// }
-
-// @keyframes bodyPreLoad {
-//   0% {
-//     opacity: 0;
-//   }
-//   99% {
-//     opacity: 0;
-//   }
-
-//   100% {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes bodyLoader {
-//   0% {
-//     display: block;
-//     opacity: 1;
-//     value: 0;
-//   }
-//   99% {
-//     display: block;
-//     opacity: 1;
-//     value: 99;
-//   }
-
-//   100% {
-//     opacity: 0;
-//     display: none;
-//   }
-// }
 
 // dark-mode
 $dark-color: #073b4c;

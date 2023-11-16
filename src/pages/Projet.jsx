@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardFlipped from "../components/card/CardFlipped";
 import CarouselFlipp from "../components/card/CarouselFlipp";
+import "../pages/css/Projet.scss";
 
 const Projet = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -36,6 +37,9 @@ const Projet = () => {
       }`}
     >
       <h1 className="title">Mes réalisations</h1>
+      <div>
+        <CarouselFlipp />
+      </div>
 
       <section className="projet-container">
         {reposWithOneStar.map((repo) => {
@@ -60,9 +64,6 @@ const Projet = () => {
           );
         })}
       </section>
-      <div>
-        <CarouselFlipp />
-      </div>
     </main>
   );
 };
