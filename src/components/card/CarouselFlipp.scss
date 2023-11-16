@@ -1,3 +1,13 @@
+.flip {
+  scale: 0, 9;
+}
+.react-multiple-carousel__arrow--left {
+  bottom: 3%;
+}
+.react-multiple-carousel__arrow--right {
+  bottom: 3%;
+}
+
 .react-multi-carousel-item {
   transform-style: preserve-3d;
   display: flex !important;
@@ -15,8 +25,8 @@
   display: flex !important;
   justify-content: center !important;
   z-index: 1 !important;
-  transform: scale(1);
-  opacity: 1.2;
+  transform: scale(0.91);
+  opacity: 1;
   pointer-events: auto !important;
   visibility: visible;
 }

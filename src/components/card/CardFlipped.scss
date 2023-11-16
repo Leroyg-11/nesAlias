@@ -1,7 +1,13 @@
+article {
+  width: 80%;
+}
+.styles__card___2P_1t {
+  margin: 0rem auto 6rem !important;
+}
 .front-content {
   display: flex;
   flex-direction: column;
-  border: 10px solid #000;
+  border: 5px solid #a1a1a1a5;
   height: 100%;
   background: #000;
   align-items: center;
@@ -13,7 +19,7 @@
 .back-content {
   display: flex;
   flex-direction: column;
-  border: 10px solid #000;
+  border: 5px solid #69606073;
   height: 100%;
   background: #000;
   align-items: center;
@@ -25,5 +31,18 @@
   }
   .description {
     font-size: 0.5rem;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  0% {
+    transform: scale(1);
   }
 }
