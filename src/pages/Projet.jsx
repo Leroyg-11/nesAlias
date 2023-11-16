@@ -60,10 +60,9 @@ const Projet = () => {
           );
         })}
       </section>
-
-      <section>
+      <div>
         <CarouselFlipp />
-      </section>
+      </div>
     </main>
   );
 };
