@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import Avatar from "../assets/fotor.jpg";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -27,16 +28,20 @@ const Home = () => {
         <div className="home-left-side">
           <div className="mobile-top-container">
             <img src={Avatar} alt="" width="400px" />
-
-            {/* <Typed
-              className="typed-text-home"
-              strings={[
-                `Bonjour, je suis <br><span class="name-size">Guillaume Leroy</span><br
-              />
-              Développeur Web Junior.`,
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Bonjour, je m'appelle Guillaume Leroy",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "Bonjour, je m'appelle Guillaume Leroy et je suis développeur web",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "Bonjour, je m'appelle Guillaume Leroy et je suis euh.. plutot : développeur web Junior",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
               ]}
-              typeSpeed={40}
-            /> */}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "2em", display: "inline-block" }}
+            />
           </div>
           <div className="btn-home-container">
             <button className="nes-btn ">
