@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import Avatar from "../assets/fotor.jpg";
 import { TypeAnimation } from "react-type-animation";
+import {
+  FlippingCard,
+  FlippingCardBack,
+  FlippingCardFront,
+} from "react-ui-cards";
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -29,8 +34,11 @@ const Home = () => {
           <div className="mobile-top-container">
             <img src={Avatar} alt="" width="400px" />
             <TypeAnimation
+              className="type-animation"
               sequence={[
                 // Same substring at the start will only be typed out once, initially
+                "Bonjour, je m'appelle ",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Bonjour, je m'appelle Guillaume Leroy",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Bonjour, je m'appelle Guillaume Leroy et je suis développeur web",
@@ -40,7 +48,10 @@ const Home = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
+              style={{
+                fontSize: "2em",
+                display: "inline-block",
+              }}
             />
           </div>
           <div className="btn-home-container">
@@ -58,6 +69,32 @@ const Home = () => {
           <img src={Avatar} alt="" />
         </div>
       </section>
+      <div>
+        <FlippingCard>
+          <FlippingCardBack>
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundImage: "url(https://i.imgur.com/wjbYGNv.jpg)",
+              }}
+            ></div>
+          </FlippingCardBack>
+          <FlippingCardFront>
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundImage: "url(https://i.imgur.com/3sKjY8V.jpg)",
+              }}
+            ></div>
+          </FlippingCardFront>
+        </FlippingCard>
+      </div>
     </main>
   );
 };
