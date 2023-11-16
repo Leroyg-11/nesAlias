@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./css/Error.scss";
 
 const Error = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -20,14 +21,13 @@ const Error = () => {
       }`}
     >
       <h1 className="title"> Erreur ! </h1>
-
-      <p>
-        <Link className="nav-link-item" to="/nesAlias/">
+      <section>
+        <Link className="error-link" to="/nesAlias/">
           <button type="button" className="nes-btn is-success">
             Retour a la page d'accueil
           </button>
         </Link>
-      </p>
+      </section>
     </main>
   );
 };
