@@ -58,85 +58,79 @@ export const Contact = () => {
   return (
     <main className="nes-container is-dark with-title">
       <h1 className="title"> CONTACTEZ MOI</h1>
-      <section>
-        <div className="form-container">
-          <form ref={form} onSubmit={sendEmail}>
-            <label>Nom</label>
-            <input
-              type="text"
-              name="user_name"
-              className={`nes-input is-dark ${
-                isNomFocused
-                  ? nom.length > 0 && nom.length > 2
-                    ? "nes-input is-success"
-                    : "nes-input is-warning"
-                  : "nes-input is-dark"
-              }`}
-              value={nom}
-              onFocus={() => setIsNomFocused(true)}
-              onChange={(e) => setNom(e.target.value)}
-            />
 
-            <label>Email</label>
-            <input
-              type="email"
-              name="user-email"
-              className={`nes-input is-dark ${
-                isEmailFocused
-                  ? email.includes("@") && email.split("@")[1].length > 0
-                    ? "nes-input is-success"
-                    : "nes-input is-warning"
-                  : "nes-input is-dark"
-              }`}
-              value={email}
-              onFocus={() => setIsEmailFocused(true)}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+      <div className="form-container">
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Nom</label>
+          <input
+            type="text"
+            name="user_name"
+            className={`nes-input is-dark ${
+              isNomFocused
+                ? nom.length > 0 && nom.length > 2
+                  ? "nes-input is-success"
+                  : "nes-input is-warning"
+                : "nes-input is-dark"
+            }`}
+            value={nom}
+            onFocus={() => setIsNomFocused(true)}
+            onChange={(e) => setNom(e.target.value)}
+          />
 
-            <label>Phone</label>
-            <input
-              type="number"
-              name="user_phone"
-              maxLength={10}
-              className={`nes-input is-dark ${
-                isPhoneFocused
-                  ? phone.length > 9
-                    ? "nes-input is-success"
-                    : "nes-input is-warning"
-                  : "nes-input is-dark"
-              }`}
-              value={phone}
-              onFocus={() => setIsPhoneFocused(true)}
-              onChange={(e) => {
-                setPhone(e.target.value);
-              }}
-            />
-            <label>Message</label>
-            <textarea
-              name="message"
-              className="nes-input is-dark"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-            <input type="submit" value="Send" />
-          </form>
-          <div
-            className={`message-container ${successMessage ? "" : "hidden"}`}
-          >
-            {successMessage && (
-              <>
-                <p
-                  className="close-message"
-                  onClick={handleSuccessMessageClose}
-                >
-                  x
-                </p>
-                <p className="success-message">{successMessage}</p>
-              </>
-            )}
-          </div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="user-email"
+            className={`nes-input is-dark ${
+              isEmailFocused
+                ? email.includes("@") && email.split("@")[1].length > 0
+                  ? "nes-input is-success"
+                  : "nes-input is-warning"
+                : "nes-input is-dark"
+            }`}
+            value={email}
+            onFocus={() => setIsEmailFocused(true)}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label>Phone</label>
+          <input
+            type="number"
+            name="user_phone"
+            maxLength={10}
+            className={`nes-input is-dark ${
+              isPhoneFocused
+                ? phone.length > 9
+                  ? "nes-input is-success"
+                  : "nes-input is-warning"
+                : "nes-input is-dark"
+            }`}
+            value={phone}
+            onFocus={() => setIsPhoneFocused(true)}
+            onChange={(e) => {
+              setPhone(e.target.value);
+            }}
+          />
+          <label>Message</label>
+          <textarea
+            name="message"
+            className="nes-input is-dark"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <input type="submit" value="Send" />
+        </form>
+        <div className={`message-container ${successMessage ? "" : "hidden"}`}>
+          {successMessage && (
+            <>
+              <p className="close-message" onClick={handleSuccessMessageClose}>
+                x
+              </p>
+              <p className="success-message">{successMessage}</p>
+            </>
+          )}
         </div>
-      </section>
+      </div>
     </main>
   );
 };

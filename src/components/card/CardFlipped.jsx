@@ -35,7 +35,7 @@ const CardFlipped = (repos) => {
             <div className="front-content">
               <img className="logo" src={logoUrl} alt="" width="80%" />
               <p className="description ">{repos.description}</p>
-              <ul className="skills nes-list is-circle">
+              <ul className="skills  is-circle">
                 {repos.topics.map((topic, index) => {
                   return (
                     <li key={index} className="skill">

@@ -17,6 +17,7 @@ const CradPopUp = (props) => {
             &times;
           </button>
           <img src={repo.logoUrl} alt="" />
+          <div className="bar-bottom"></div>
 
           <div className="content ">
             {repo.description}
