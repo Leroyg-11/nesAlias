@@ -27,13 +27,15 @@
 }
 .mobile {
   .about-container {
+    margin: 0;
+    padding: 0;
     line-height: 1rem;
     .item-about-container {
       padding: 0;
       margin: 0 !important;
-      /* flex-flow: wrap; */
+
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.4rem;
       position: relative;
       a {
         font-size: 0.5rem;
