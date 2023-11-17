@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import Avatar from "../assets/fotor.jpg";
 import { TypeAnimation } from "react-type-animation";
-import {
-  FlippingCard,
-  FlippingCardBack,
-  FlippingCardFront,
-} from "react-ui-cards";
+
 import { Link } from "react-router-dom";
 
 const Home = () => {

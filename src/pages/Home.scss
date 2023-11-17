@@ -67,13 +67,13 @@ main {
         }
         .btn-home-container {
           margin-top: 0rem;
-
+          justify-content: space-around;
           gap: 0.5rem;
           display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: center;
+
+          button {
+            font-size: 0.6rem;
+          }
         }
       }
     }
