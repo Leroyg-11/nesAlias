@@ -27,7 +27,8 @@
 }
 .mobile {
   .about-container {
-    margin: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     line-height: 1rem;
     .item-about-container {
       padding: 0;
