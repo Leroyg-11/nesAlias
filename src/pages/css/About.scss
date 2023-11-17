@@ -28,21 +28,21 @@
 .mobile {
   .about-container {
     margin: 0;
-    padding: 0;
     line-height: 1rem;
     .item-about-container {
       padding: 0;
-      justify-content: space-between;
       margin: 0 !important;
+      justify-content: space-between;
 
-      // flex-wrap: wrap;
-      gap: 0.6rem;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      width: 100%;
       position: relative;
       .is-success {
         scale: 1;
       }
       a {
-        font-size: 0.2rem;
+        font-size: 0.5rem;
       }
     }
     .about-article {
