@@ -10,13 +10,23 @@
     display: flex;
     list-style: none;
     justify-content: space-evenly;
+    gap: 1.5vw;
     width: 100%;
+    .item-about {
+      font-size: 1.5vw;
+    }
     .is-success {
       scale: 1.2;
     }
   }
   .about-article {
-    margin: auto;
+    margin-top: 2rem;
+    font-family: monospace;
+    font-size: 2vw;
+    li {
+      display: flex;
+      gap: 30vw;
+    }
   }
 
   .bold {
@@ -25,6 +35,74 @@
     font-size: 1.15rem;
   }
 }
+.about-competences-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  ul {
+    display: flex !important;
+    gap: 2rem;
+    flex-direction: column;
+    li {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .html-progress-container {
+      width: 15vw;
+      height: 5vh;
+      border: 5px solid #ffffff;
+      .html-progress {
+        width: 80%;
+        opacity: 0;
+        height: 100%;
+        background-color: #76c442;
+        animation: progress 2s forwards;
+        animation-delay: 1.5s;
+      }
+    }
+    .css-progress-container {
+      width: 15vw;
+      height: 5vh;
+      border: 5px solid #ffffff;
+      .css-progress {
+        width: 60%;
+        opacity: 0;
+        height: 100%;
+        background-color: #76c442;
+        animation: progress 2s forwards;
+        animation-delay: 1.5s;
+      }
+    }
+    .java-progress-container {
+      width: 15vw;
+      height: 5vh;
+      border: 5px solid #ffffff;
+      .java-progress {
+        width: 40%;
+        opacity: 0;
+        height: 100%;
+        background-color: #76c442;
+        animation: progress 2s forwards;
+        animation-delay: 1.5s;
+      }
+    }
+    .react-progress-container {
+      width: 15vw;
+      height: 5vh;
+      border: 5px solid #ffffff;
+      .react-progress {
+        width: 30%;
+        opacity: 0;
+        height: 100%;
+        background-color: #76c442;
+        animation: progress 2s forwards;
+        animation-delay: 1.5s;
+      }
+    }
+  }
+}
+
 .mobile {
   .about-container {
     margin: 0 !important;
@@ -55,5 +133,15 @@
 
       font-size: 1.15rem;
     }
+  }
+}
+
+@keyframes progress {
+  0% {
+    opacity: 1;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
   }
 }

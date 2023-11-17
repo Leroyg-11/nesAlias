@@ -4,6 +4,7 @@ import "./css/About.scss";
 const About = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [sectionToDisplay, setSectionToDisplay] = useState("parcours");
+  const donePercentage = 70;
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +30,6 @@ const About = () => {
     e.preventDefault();
     const a = e.target.closest("a");
     const section = a.getAttribute("href");
-    console.log("Button clicked", section);
     setSectionToDisplay(section);
 
     // Ajouter la classe "is-success" au bouton cliqué
@@ -39,7 +39,6 @@ const About = () => {
     });
     a.classList.add("is-success");
   };
-  console.log("Current section:", sectionToDisplay);
 
   return (
     <main
@@ -76,10 +75,16 @@ const About = () => {
         {sectionToDisplay === "parcours" && (
           <article
             key="parcours"
-            id="parcours"
             className="about-parcours-container about-article"
           >
-            Mon parcours avant la formation
+            Je suis né en 1995, j'ai 28 ans. J'ai déjà un parcours professionnel
+            riche et diversifié. <br />
+            br Après avoir travaillé pendant 6 ans comme vendeur en boulangerie,
+            suite à ça, j'ai été téléconseiller en chambre des métiers pendant 2
+            ans. <br />
+            J'ai ensuite travaillé quelques mois en mutuelle toujours en tant
+            que téléconseiller. En mars 2023, j'ai décidé de reprendre mes
+            études. J'ai entrepris une formation de développeur web.
           </article>
         )}
         {sectionToDisplay === "formation" && (
@@ -87,14 +92,48 @@ const About = () => {
             key="formation"
             className="about-formation-container about-article"
           >
-            {/* Contenu pour la section "formation" */}
-            Comment c'est passé ma formation
+            N'ayant pas d'expérience dans le domaine du développement web il y a
+            encore quelques mois, géant commencé par me former sur YouTube grâce
+            des tutos. J'ai commencé ma formation d'intégrateur web d'une durée
+            de 9 mois en mars 2023 avec Openclassrooms. J'ai appris les bases du
+            HTML, CSS et JavaScript. La formation m'a beaucoup appris. Outre les
+            langages a proprement parler, j'ai appris à me débrouiller de na mes
+            recherches et mes problèmes. <br />
+            Ce qui me permet aujourd'hui de créer à partir de zéro un site tel
+            que celui sur lequel vous vous trouvez actuellement. <br />
+            Il n'est peut etre parfait, mais il est le fruit de mon travail et
+            il evolura surment avec le temps et les connaissances grandissantes.
+            <br />
           </article>
         )}
         {sectionToDisplay === "competences" && (
           <article className="about-competences-container about-article">
-            {/* Contenu pour la section "competences" */}
-            Les compétences acquises pendant la formation{" "}
+            <ul>
+              <li>
+                <h2>HTML</h2>
+                <div className="html-progress-container">
+                  <div className="html-progress"></div>
+                </div>
+              </li>
+              <li>
+                <h2>Css</h2>
+                <div className="css-progress-container">
+                  <div className="css-progress"></div>
+                </div>
+              </li>
+              <li>
+                <h2>Javascript</h2>
+                <div className="java-progress-container">
+                  <div className="java-progress"></div>
+                </div>
+              </li>
+              <li>
+                <h2>React</h2>
+                <div className="react-progress-container">
+                  <div className="react-progress"></div>
+                </div>
+              </li>
+            </ul>
           </article>
         )}
         {sectionToDisplay === "appétence" && (
