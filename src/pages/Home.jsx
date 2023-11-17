@@ -39,13 +39,14 @@ const Home = () => {
               sequence={[
                 // Same substring at the start will only be typed out once, initially
                 "Bonjour, je m'appelle ",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                1000,
+
                 "Bonjour, je m'appelle Guillaume Leroy",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                1000,
                 "Bonjour, je m'appelle Guillaume Leroy et je suis développeur web",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                1000,
                 "Bonjour, je m'appelle Guillaume Leroy et je suis euh.. plutot : développeur web Junior",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                1000,
               ]}
               wrapper="span"
               speed={50}

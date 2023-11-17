@@ -3,6 +3,7 @@ import "./css/About.scss";
 
 const About = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [sectionToDisplay, setSectionToDisplay] = useState("parcours");
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,6 +14,33 @@ const About = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    // Ajouter la classe "is-success" au bouton correspondant à la section par défaut
+    const defaultButton = document.querySelector(
+      `.item-about a[href="${sectionToDisplay}"]`
+    );
+    if (defaultButton) {
+      defaultButton.classList.add("is-success");
+    }
+  }, [sectionToDisplay]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const a = e.target.closest("a");
+    const section = a.getAttribute("href");
+    console.log("Button clicked", section);
+    setSectionToDisplay(section);
+
+    // Ajouter la classe "is-success" au bouton cliqué
+    const allButtons = document.querySelectorAll(".item-about a");
+    allButtons.forEach((button) => {
+      button.classList.remove("is-success");
+    });
+    a.classList.add("is-success");
+  };
+  console.log("Current section:", sectionToDisplay);
+
   return (
     <main
       className={`nes-container is-dark with-title ${
@@ -21,47 +49,61 @@ const About = () => {
     >
       <h1 className="title">A propos</h1>
 
-      <section className="message-list">
-        <section className="message -left">
-          <i className="nes-bcrikko"></i>
+      <section className="about-container">
+        <ul className="item-about-container">
+          <li className="item-about       ">
+            <a className="nes-btn" href="parcours" onClick={handleClick}>
+              Parcours
+            </a>
+          </li>
+          <li className="item-about       ">
+            <a className="nes-btn" href="formation" onClick={handleClick}>
+              Formation
+            </a>
+          </li>
+          <li className="item-about       ">
+            <a className="nes-btn" href="competences" onClick={handleClick}>
+              Compétences
+            </a>
+          </li>
+          <li className="item-about       ">
+            <a className="nes-btn" href="appétence" onClick={handleClick}>
+              Appétence
+            </a>
+          </li>
+        </ul>
 
-          <div className="nes-balloon from-left is-dark">
-            <p>
-              Je m'appelle Guillaume Leroy. <br />
-              <br />
-            </p>
-          </div>
-        </section>
-
-        <section className="message -right">
-          <i className="nes-bcrikko"></i>
-          <div className="nes-balloon from-right is-dark">
-            <p>
-              Développeur Web Junior à Lille, j'ai 28 ans. Suite à une
-              reconversion de carrière, j'ai décidé de me lancer dans le
-              développement web.
-            </p>
-          </div>
-        </section>
-
-        <section className="message -left">
-          <i className="nes-bcrikko"></i>
-
-          <div className="nes-balloon from-left is-dark">
-            <p>
-              J'ai suivi une formation et des cours en ligne pour maîtriser les
-              langages de programmation, notamment HTML, CSS, JavaScript, ainsi
-              que des frameworks populaires tels que React et NodeJS. <br />
-              Mon ambition est de m'investir dans des projets stimulants,
-              d'acquérir une expérience pratique significative, et de participer
-              à la création de solutions créatives et innovantes. Je suis
-              actuellement ouvert aux opportunités de stage ou d'emploi dans le
-              domaine du développement web.
-            </p>
-          </div>
-        </section>
+        {sectionToDisplay === "parcours" && (
+          <article
+            key="parcours"
+            id="parcours"
+            className="about-parcours-container about-article"
+          >
+            Mon parcours avant la formation
+          </article>
+        )}
+        {sectionToDisplay === "formation" && (
+          <article
+            key="formation"
+            className="about-formation-container about-article"
+          >
+            {/* Contenu pour la section "formation" */}
+            Comment c'est passé ma formation
+          </article>
+        )}
+        {sectionToDisplay === "competences" && (
+          <article className="about-competences-container about-article">
+            {/* Contenu pour la section "competences" */}
+            Les compétences acquises pendant la formation{" "}
+          </article>
+        )}
+        {sectionToDisplay === "appétence" && (
+          <article className="about-appetence-container about-article">
+            {/* Contenu pour la section "appétence" */}
+            Les sujets et languages ue j'aimerais appréhender
+          </article>
+        )}
       </section>
-      <div className="about-mobile-container"></div>
     </main>
   );
 };
