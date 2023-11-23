@@ -113,25 +113,25 @@ const About = () => {
           <article className="about-competences-container about-article">
             <ul>
               <li>
-                <h2>React</h2>
+                <p>React</p>
                 <div className="react-progress-container">
                   <div className="react-progress"></div>
                 </div>
               </li>
               <li>
-                <h2>Javascript</h2>
+                <p>Javascript</p>
                 <div className="java-progress-container">
                   <div className="java-progress"></div>
                 </div>
               </li>
               <li>
-                <h2>HTML</h2>
+                <p>HTML</p>
                 <div className="html-progress-container">
                   <div className="html-progress"></div>
                 </div>
               </li>
               <li>
-                <h2>Css</h2>
+                <p>Css</p>
                 <div className="css-progress-container">
                   <div className="css-progress"></div>
                 </div>

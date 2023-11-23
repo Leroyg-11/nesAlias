@@ -1,12 +1,16 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./css/Contact.scss";
+import PopupContact from "../components/Contact/PopupContact";
+import useWindowSize from "../CustomHook";
 
 export const Contact = () => {
+  const windowSize = useWindowSize();
+
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleSuccessMessageClose = () => {
-    setSuccessMessage("");
+    <PopupContact />;
   };
 
   const form = useRef();
@@ -31,12 +35,12 @@ export const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_r012cd6",
-        "template_j4ow6n3",
-        form.current,
-        "Lon5Jzk7nxbfjrV8O"
-      )
+      // .sendForm(
+      //   "service_r012cd6",
+      //   "template_j4ow6n3",
+      //   form.current,
+      //   "Lon5Jzk7nxbfjrV8O"
+      // )
       .then(
         (result) => {
           console.log(result.text);
@@ -53,6 +57,7 @@ export const Contact = () => {
     setIsNomFocused(false);
     setIsEmailFocused(false);
     setIsPhoneFocused(false);
+    <PopupContact />;
   };
 
   return (
@@ -118,18 +123,9 @@ export const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <input type="submit" value="Send" />
+          <PopupContact />
         </form>
-        <div className={`message-container ${successMessage ? "" : "hidden"}`}>
-          {successMessage && (
-            <>
-              <p className="close-message" onClick={handleSuccessMessageClose}>
-                x
-              </p>
-              <p className="success-message">{successMessage}</p>
-            </>
-          )}
-        </div>
+        <div></div>
       </div>
     </main>
   );
