@@ -79,7 +79,7 @@
       height: 5vh;
       border: 5px solid #ffffff;
       .java-progress {
-        width: 40%;
+        width: 55%;
         opacity: 0;
         height: 100%;
         background-color: #76c442;
@@ -92,7 +92,7 @@
       height: 5vh;
       border: 5px solid #ffffff;
       .react-progress {
-        width: 30%;
+        width: 60%;
         opacity: 0;
         height: 100%;
         background-color: #76c442;
@@ -133,6 +133,9 @@
 
       font-size: 1.15rem;
     }
+  }
+  .about-competences-container {
+    width: 70vw;
   }
 }
 

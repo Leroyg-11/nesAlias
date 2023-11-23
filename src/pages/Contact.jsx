@@ -80,7 +80,7 @@ export const Contact = () => {
           <label>Email</label>
           <input
             type="email"
-            name="user-email"
+            name="user_email"
             className={`nes-input is-dark ${
               isEmailFocused
                 ? email.includes("@") && email.split("@")[1].length > 0
