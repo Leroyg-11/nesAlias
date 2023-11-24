@@ -12,6 +12,7 @@
     justify-content: space-evenly;
     gap: 1.5vw;
     width: 100%;
+    padding: 0 !important;
     .item-about {
       font-size: 1.5vw;
     }
@@ -43,14 +44,16 @@
     display: flex !important;
     gap: 2rem;
     flex-direction: column;
+    padding: 0 !important;
+
     li {
       display: flex;
       width: 100%;
       justify-content: space-between;
     }
-    .html-progress-container {
-      width: 15vw;
-      height: 5vh;
+    .progress-container {
+      width: 20vw;
+      height: 3vh;
       border: 5px solid #ffffff;
       .html-progress {
         width: 80%;
@@ -60,11 +63,6 @@
         animation: progress 1.5s forwards;
         animation-delay: 1.1s;
       }
-    }
-    .css-progress-container {
-      width: 15vw;
-      height: 5vh;
-      border: 5px solid #ffffff;
       .css-progress {
         width: 60%;
         opacity: 0;
@@ -73,11 +71,6 @@
         animation: progress 1.5s forwards;
         animation-delay: 1.2s;
       }
-    }
-    .java-progress-container {
-      width: 15vw;
-      height: 5vh;
-      border: 5px solid #ffffff;
       .java-progress {
         width: 55%;
         opacity: 0;
@@ -86,11 +79,6 @@
         animation: progress 1.5s forwards;
         animation-delay: 1.3s;
       }
-    }
-    .react-progress-container {
-      width: 15vw;
-      height: 5vh;
-      border: 5px solid #ffffff;
       .react-progress {
         width: 60%;
         opacity: 0;
@@ -104,6 +92,7 @@
 }
 
 .mobile {
+  padding: 1rem;
   .about-container {
     margin: 0 !important;
     padding: 0 !important;
@@ -148,6 +137,7 @@
 
     ul {
       padding: 0;
+      margin: auto;
       p {
         font-size: 1rem;
       }

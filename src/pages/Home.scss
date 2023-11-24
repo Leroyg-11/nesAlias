@@ -41,6 +41,7 @@ main {
   }
   &.mobile {
     .home-section {
+      padding: 0;
       .home-right-side {
         display: none;
       }
@@ -48,6 +49,8 @@ main {
         width: 100%;
         margin: 0;
         gap: 2rem;
+        position: relative;
+        top: -5rem;
         .mobile-top-container {
           display: flex;
           flex-direction: column;

@@ -114,25 +114,25 @@ const About = () => {
             <ul>
               <li>
                 <p>React</p>
-                <div className="react-progress-container">
+                <div className="progress-container">
                   <div className="react-progress"></div>
                 </div>
               </li>
               <li>
                 <p>Javascript</p>
-                <div className="java-progress-container">
+                <div className="progress-container">
                   <div className="java-progress"></div>
                 </div>
               </li>
               <li>
                 <p>HTML</p>
-                <div className="html-progress-container">
+                <div className="progress-container">
                   <div className="html-progress"></div>
                 </div>
               </li>
               <li>
                 <p>Css</p>
-                <div className="css-progress-container">
+                <div className="progress-container">
                   <div className="css-progress"></div>
                 </div>
               </li>
