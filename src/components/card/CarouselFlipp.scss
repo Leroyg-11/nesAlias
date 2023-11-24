@@ -29,4 +29,14 @@
   opacity: 1 !important;
   pointer-events: auto !important;
   visibility: visible;
+  animation: swipe 0.5s forwards !important;
+}
+
+@keyframes swipe {
+  0% {
+    transform: rotatey(0deg);
+  }
+  100% {
+    transform: rotatey(10deg);
+  }
 }
