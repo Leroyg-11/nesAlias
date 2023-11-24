@@ -61,7 +61,11 @@ export const Contact = () => {
   };
 
   return (
-    <main className="nes-container is-dark with-title">
+    <main
+      className={`nes-container is-dark with-title ${
+        windowSize <= 768 ? "mobile" : ""
+      }`}
+    >
       <h1 className="title"> CONTACTEZ MOI</h1>
 
       <div className="form-container">
